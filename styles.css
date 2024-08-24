@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background: #f4f4f4;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgb(183, 164, 172), rgb(203, 66, 158), rgb(117, 171, 242), rgb(237, 169, 164));
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 60%);
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: pulse 8s infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin: 0;
+    line-height: 1.2;
+    animation: fadeInUp 8s ease-out;
+}
+
+.hero p {
+    font-size: 1.5em;
+    animation: fadeInUp 5s ease-out 3s;
+}
+
+.btn-start {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #ff6f61;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 4s ease, transform 4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-start:hover {
+    background: #e55d5d;
+    transform: scale(5s);
+}
+
+.features {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover::before {
+    opacity: 0;
+}
+
+.card h3 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.card p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(2);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2.05);
+        opacity: 1.3;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 1;
+    }
+}

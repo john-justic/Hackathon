@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate T-Shirt Customizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Boldartathon</h1>
+            <h1>Design Your Dream T-Shirt</h1>
+            <p>Create unique designs effortlessly with our state-of-the-art customization tool.</p>
+            <a href="https://www.customink.com/ndx/" class="btn-start"><span>Start Customizing</span></a>
+
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <h2>Our Features</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Design Templates</h3>
+                <p>Choose from a variety of high-quality design templates to get started quickly.</p>
+            </div>
+            <div class="card">
+                <h3>Color Options</h3>
+                <p>Select from a wide range of vibrant colors to match your style.</p>
+            </div>
+            <div class="card">
+                <h3>Live Preview</h3>
+                <p>See an instant preview of your T-shirt design with our interactive tool.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Ultimate T-Shirt Customizer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
